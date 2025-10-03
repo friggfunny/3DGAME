@@ -1334,7 +1334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 861010202963860477, guid: 070095bfedf139b42979536db6a4f68e, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2753722846259439681, guid: 070095bfedf139b42979536db6a4f68e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1385,7 +1385,10 @@ PrefabInstance:
       addedObject: {fileID: 1877280306}
     - targetCorrespondingSourceObject: {fileID: 56715548630396312, guid: 070095bfedf139b42979536db6a4f68e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1877280310}
+      addedObject: {fileID: 1877280314}
+    - targetCorrespondingSourceObject: {fileID: 56715548630396312, guid: 070095bfedf139b42979536db6a4f68e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1877280315}
   m_SourcePrefab: {fileID: 100100000, guid: 070095bfedf139b42979536db6a4f68e, type: 3}
 --- !u!1001 &779753556
 PrefabInstance:
@@ -3237,30 +3240,40 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1877280310
+--- !u!114 &1877280314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877280301}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3410741753bbfb47a1d7f66e0232ecd, type: 3}
+  m_Script: {fileID: 11500000, guid: a64209209dc81d542bf4371627fba443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1877280315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877280301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d1a9bc581273b4e9d3186e903162c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 2051574778}
-  mouseSensitivity: 100
-  moveSpeed: 10
-  airMultiplier: 0.4
-  groundDrag: 6
-  jumpForce: 10
-  jumpKey: 32
-  groundCheck: {fileID: 0}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 0
-  groundDistance: 0.4
+  lookSpeedX: 2
+  lookSpeedY: 2
+  moveSpeed: 6
+  maxSpeed: 15
+  groundAcceleration: 10
+  airAcceleration: 25
+  groundFriction: 6
+  jumpForce: 8
+  gravity: 20
 --- !u!1 &1890111383
 GameObject:
   m_ObjectHideFlags: 0

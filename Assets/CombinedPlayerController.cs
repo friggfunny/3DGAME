@@ -54,7 +54,7 @@ public class CombinedPlayerController : MonoBehaviour
             Jump();
         }
 
-        rb.drag = isGrounded ? groundDrag : 0;
+        rb.linearDamping = isGrounded ? groundDrag : 0;
         // ------------------------------------
     }
 
@@ -96,7 +96,7 @@ public class CombinedPlayerController : MonoBehaviour
 
     private void Jump()
     {
-        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 }
